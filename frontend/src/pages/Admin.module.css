@@ -1,0 +1,118 @@
+.container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; position: relative; z-index: 1; }
+
+.pageTitle {
+  font-family: 'Bangers', cursive; font-size: 2.5rem;
+  letter-spacing: 3px; color: var(--blanco); margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+
+.pageTitle::after { content: ''; flex: 1; height: 3px; background: linear-gradient(to right, var(--rojo), transparent); }
+
+.formBox {
+  background: var(--negro-panel); border: 2px solid var(--gris);
+  border-radius: 4px; padding: 2rem; margin-bottom: 2rem;
+}
+
+.formTitle {
+  font-family: 'Bangers', cursive; font-size: 1.5rem;
+  letter-spacing: 2px; color: var(--amarillo); margin-bottom: 1.5rem;
+}
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.full { grid-column: 1 / -1; }
+.group { display: flex; flex-direction: column; }
+
+.label {
+  font-family: 'Oswald', sans-serif; font-size: 0.75rem;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gris-texto); margin-bottom: 0.4rem;
+}
+
+.input {
+  background: var(--gris); border: 2px solid #333; border-radius: 2px;
+  color: var(--blanco); font-family: 'Barlow', sans-serif;
+  font-size: 1rem; padding: 0.7rem 1rem; outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus { border-color: var(--rojo); }
+.input::placeholder { color: #555; }
+
+.btnSubmit {
+  background: var(--rojo); color: white; border: none;
+  font-family: 'Bangers', cursive; font-size: 1.2rem;
+  letter-spacing: 3px; padding: 0.8rem 2rem; border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.btnSubmit:hover { background: var(--rojo-oscuro); transform: translateY(-2px); }
+
+.btnCancel {
+  background: none; border: 1px solid var(--gris-texto); color: var(--gris-texto);
+  font-family: 'Bangers', cursive; font-size: 1.2rem;
+  letter-spacing: 3px; padding: 0.8rem 2rem; border-radius: 2px; transition: all 0.2s;
+}
+
+.btnCancel:hover { border-color: var(--blanco); color: var(--blanco); }
+
+.msg {
+  margin-top: 1rem; padding: 0.7rem; border-radius: 2px;
+  font-family: 'Oswald', sans-serif; font-size: 0.85rem; letter-spacing: 1px;
+}
+
+.success { background: #0d2a0d; border: 1px solid #2d6a2d; color: #5cb85c; }
+.error { background: #2a0d0d; border: 1px solid #6a2d2d; color: #e55; }
+
+.listTitle {
+  font-family: 'Bangers', cursive; font-size: 2rem;
+  letter-spacing: 3px; color: var(--blanco); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+
+.listTitle::after { content: ''; flex: 1; height: 3px; background: linear-gradient(to right, var(--rojo), transparent); }
+
+.list { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.item {
+  background: var(--negro-card); border: 1px solid var(--gris);
+  border-radius: 4px; padding: 1rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  transition: border-color 0.2s;
+}
+
+.item:hover { border-color: var(--rojo); }
+.itemInfo { flex: 1; }
+.itemNombre { font-family: 'Oswald', sans-serif; font-weight: 700; margin-bottom: 0.2rem; }
+.itemMeta { font-size: 0.8rem; color: var(--gris-texto); }
+.itemMeta span { color: var(--amarillo); }
+
+.btnEdit {
+  background: none; border: 1px solid var(--amarillo); color: var(--amarillo);
+  font-family: 'Oswald', sans-serif; font-size: 0.75rem;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 0.4rem 0.8rem; border-radius: 2px; transition: all 0.2s; white-space: nowrap;
+}
+
+.btnEdit:hover { background: var(--amarillo); color: var(--negro); }
+
+.btnDelete {
+  background: none; border: 1px solid var(--rojo); color: var(--rojo);
+  font-family: 'Oswald', sans-serif; font-size: 0.75rem;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 0.4rem 0.8rem; border-radius: 2px; transition: all 0.2s; white-space: nowrap;
+}
+
+.btnDelete:hover { background: var(--rojo); color: white; }
+
+.blocked { text-align: center; padding: 5rem 2rem; position: relative; z-index: 1; }
+.blockedTitle { font-family: 'Bangers', cursive; font-size: 3rem; color: var(--rojo); margin-bottom: 1rem; }
+
+.btnPrimary {
+  background: var(--rojo); color: white; border: none;
+  font-family: 'Bangers', cursive; font-size: 1.2rem;
+  letter-spacing: 3px; padding: 0.8rem 2rem; border-radius: 2px; transition: all 0.2s;
+}
+
+.btnPrimary:hover { background: var(--rojo-oscuro); }
+
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
