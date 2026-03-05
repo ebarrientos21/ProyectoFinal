@@ -5,7 +5,7 @@ import { useToast } from '../components/Toast'
 import Loader from '../components/Loader'
 import styles from './Catalogo.module.css'
 
-const API = 'http://localhost:3000/api'
+const API = 'https://bazinga-comics-backend.onrender.com/api'
 
 export default function Catalogo() {
   const [comics, setComics] = useState([])
@@ -28,7 +28,7 @@ export default function Catalogo() {
   return (
     <div>
       <div className={styles.hero}>
-        <h1 className={styles.heroTitle}>KOMIX STORE</h1>
+        <h1 className={styles.heroTitle}>BAZINGA COMICS</h1>
         <p className={styles.heroSub}>Tu universo de cómics</p>
         <p className={styles.heroDesc}>Los mejores cómics de Marvel, DC y más. Envío gratis en pedidos +$500.</p>
       </div>
@@ -54,11 +54,23 @@ export default function Catalogo() {
             {comics.map((c, i) => (
               <div key={c._id} className={styles.card} style={{ animationDelay: `${i * 0.07}s` }}>
                 <div className={styles.imgWrap}>
-                  {c.imagen
-                    ? <img src={c.imagen} alt={c.nombre} className={styles.img}
-                        onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex' }} />
-                    : null}
-                  <div className={styles.imgPlaceholder} style={{ display: c.imagen ? 'none' : 'flex' }}>📖</div>
+                  {c.imagen ? (
+                    <img
+                      src={c.imagen}
+                      alt={c.nombre}
+                      className={styles.img}
+                      onError={e => {
+                        e.target.style.display = 'none'
+                        e.target.nextSibling.style.display = 'flex'
+                      }}
+                    />
+                  ) : null}
+                  <div
+                    className={styles.imgPlaceholder}
+                    style={{ display: c.imagen ? 'none' : 'flex' }}
+                  >
+                    📖
+                  </div>
                   <span className={styles.stockBadge}>Stock: {c.stock}</span>
                 </div>
                 <div className={styles.info}>

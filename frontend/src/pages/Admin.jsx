@@ -6,7 +6,7 @@ import { useToast } from '../components/Toast'
 import Loader from '../components/Loader'
 import styles from './Admin.module.css'
 
-const API = 'http://localhost:3000/api'
+const API = 'https://bazinga-comics-backend.onrender.com/api'
 
 const emptyForm = { nombre: '', descripcion: '', precio: '', stock: '', imagen: '', editorial: '', personaje: '' }
 

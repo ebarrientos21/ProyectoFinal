@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useAuth } from '../context/AuthContext'
 import styles from './Auth.module.css'
 
-const API = 'http://localhost:3000/api'
+const API = 'https://bazinga-comics-backend.onrender.com/api'
 
 export default function Auth() {
   const [tab, setTab] = useState('login')
@@ -38,7 +38,7 @@ export default function Auth() {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ backgroundImage: "url('/heroes.jpg')" }}>
       <div className={styles.box}>
         <h2 className={styles.title}>ACCESO</h2>
         <p className={styles.subtitle}>Inicia sesión o crea tu cuenta</p>

@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <Link to="/" className={styles.logo}>
-        KOM<span>I</span>X
+        BAZINGA <span>COMICS</span>
       </Link>
       <div className={styles.links}>
         <Link to="/" className={`${styles.btn} ${isActive('/')}`}>Catálogo</Link>
